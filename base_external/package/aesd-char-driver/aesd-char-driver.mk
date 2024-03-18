@@ -1,7 +1,7 @@
 
 ##############################################################
 #
-# AESD-CHAR-DEVICE
+# AESD-CHAR-DRIVER
 #
 ##############################################################
 
@@ -17,7 +17,7 @@ AESD_ASSIGNMENTS_GIT_SUBMODULES = YES
 AESD_CHAR_DRIVER_MODULE_SUBDIRS = aesd-char-driver
 
 # TODO add your writer, finder and finder-test utilities/scripts to the installation steps below
-define AESD_CHAR_DEVICE_INSTALL_TARGET_CMDS
+define AESD_CHAR_DRIVER_INSTALL_TARGET_CMDS
 	$(INSTALL) -m 0755 $(@D)/aesd-char-device/aesdchar_load $(TARGET_DIR)/usr/bin/
 	$(INSTALL) -m 0755 $(@D)/aesd-char-device/aesdchar_unload $(TARGET_DIR)/usr/bin/
 	$(INSTALL) -m 0755 $(@D)/aesd-char-driver/aesdchardevice-start-stop.sh $(TARGET_DIR)/etc/init.d/S97aesdchar
